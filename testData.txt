@@ -1,0 +1,145 @@
+comment
+Reading expression...
+read
+((a+b)*(4+(2-x)))
+printInfix
+comment
+Substituting ((7^3)+9) for b...
+assign
+b
+((7^3)+9)
+printInfix
+comment
+Simplifying expression...
+simplify
+printInfix
+comment
+Simple test of infix, postfix, prefix
+read
+(A*(B+(C-D)))
+comment
+Infix:
+printInfix
+comment
+Prefix:
+printPrefix
+comment
+Postfix:
+printPostfix
+comment
+
+comment
+Big expression test
+read
+(3-((66+E)*((((B*F)-(C+D))+(15-9))+3)))
+comment
+Infix:
+printInfix
+comment
+Prefix:
+printPrefix
+comment
+Postfix:
+printPostfix
+comment
+Testing simplify (15-9 becomes 6) and then printing infix
+simplify
+printInfix
+comment
+displaying structure
+displayStructure
+comment
+testing assign E to ((((a+b)-5)*79)^c) and then printInfix
+assign
+E
+((((a+b)-5)*79)^c)
+printInfix
+comment
+
+comment
+big simplify test
+read
+((((0*z)+(((1*y)*(a+1))+(b*0)))+((0^c)+(d^1)))-((e-0)+(0+f)))
+comment
+Infix:
+printInfix
+comment
+Prefix:
+printPrefix
+comment
+Postfix:
+printPostfix
+comment
+simplify and then printInfix --> result should be (((y*(a+1))+d)-(e+f))
+simplify
+printInfix
+comment
+assigning y to (0*x)
+assign
+y
+(0*x)
+comment
+Infix:
+printInfix
+comment
+Prefix:
+printPrefix
+comment
+Postfix:
+printPostfix
+comment
+simplify and then printInfix --> result should be (d-(e+f))
+simplify
+printInfix
+comment
+
+comment
+testing negative numbers
+read
+((-2*((-4+-45)--15))*(-6023--5213))
+printInfix
+comment
+displayStructure
+displayStructure
+comment
+simplify then printInfix --> result should be -55080
+simplify
+printInfix
+comment
+displayStructure (should be ==> -55080)
+displayStructure
+comment
+
+comment
+testing long variable names
+read
+((hello+hi)-(goodMorning*goodEvening))
+printInfix
+comment
+assigning goodMorning to (1+1) and then printInfix
+assign
+goodMorning
+(1+1)
+printInfix
+comment
+assigning goodEvening to (4-2) and then printInfix
+assign
+goodEvening
+(4-2)
+printInfix
+comment
+assigning hi to (2^3) and then printInfix
+assign
+hi
+(2^3)
+printInfix
+comment
+assigning hello to (2*5) and then printInfix
+assign
+hello
+(2*5)
+printInfix
+comment
+simplify and then printPostfix (should be 14)
+simplify
+printPostfix
